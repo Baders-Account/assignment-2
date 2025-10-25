@@ -80,6 +80,9 @@ a {
 #contact {
   background-color: #22333B;
   color: #e6ccb2;
+  padding: 3rem 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
 }
 
@@ -209,7 +212,10 @@ option{
 
 .dark-mode #contact {
   background-color: #e6ccb2 !important;     
-  color: #22333B; 
+  color: #22333B;               
+  padding: 3rem 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
 }
 
