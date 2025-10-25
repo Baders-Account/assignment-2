@@ -1,10 +1,16 @@
+
+
 function toggleTheme() {
      
-        var body = document.body; // Get the body element
-        body.classList.toggle('dark-mode'); // Toggle the 'dark-mode' class
-        
+    const body = document.body;
+    const isDarkMode = body.classList.toggle("dark-mode");
 
-   
+    // Save user preference
+    if (isDarkMode) {
+      localStorage.setItem("theme", "dark");
+    } else {
+      localStorage.setItem("theme", "light");
+    }
 }
 
 
@@ -88,6 +94,11 @@ const changeProjects = (value) => {
 
 document.addEventListener("DOMContentLoaded", () => {
   changeProjects("all");
+  const savedTheme = localStorage.getItem("theme");
+
+    if (savedTheme === "dark") {
+      document.body.classList.add("dark-mode");
+    }
  
 
 });
