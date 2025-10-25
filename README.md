@@ -41,15 +41,3 @@ It integrates a dynamic **GitHub API** section that fetches starred repositories
 
 ---
 
-### 📁 Folder Structure 
-ASSIGNMENT-2/
-│
-├── index.html
-├── css/
-│ └── styles.css
-├── js/
-│ └── script.js
-├── assets/
-│ └── images/
-│ └── photo.jpg
-└── README.md 
