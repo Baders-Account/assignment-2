@@ -28,12 +28,22 @@ const changeProjects = (value) => {
     else{
         url = `https://api.github.com/search/repositories?q=user:Baders-Account+topic:${choice}`
     }
+    const projectsContainer = document.getElementById('projects-container');
+
+    // Loading while fetching
+      projectsContainer.innerHTML = `
+    <div class="text-center w-100 py-5">
+      <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <p class="mt-3 text-muted">Loading projects...</p>
+    </div>
+  `;
     
     fetch(url)
     .then(response => response.json())
     .then(data => {
-        const projectsContainer = document.getElementById('projects-container');
-        projectsContainer.innerHTML = '';
+                projectsContainer.innerHTML = '';
         const repos = Array.isArray(data) ? data : data.items;
  
         
@@ -51,7 +61,7 @@ const changeProjects = (value) => {
 
   
             const card = document.createElement('div');
-            card.className = 'card shadow-sm h-100 hover-opacity-75 transition-opacity'; // hover effect here
+            card.className = 'card shadow-sm h-100 rounded-4'; 
 
   
             const cardBody = document.createElement('div');
